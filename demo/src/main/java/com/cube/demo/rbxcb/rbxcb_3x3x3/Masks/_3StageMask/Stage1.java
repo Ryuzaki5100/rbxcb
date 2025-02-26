@@ -1,7 +1,7 @@
 package com.cube.demo.rbxcb.rbxcb_3x3x3.Masks._3StageMask;
 
-import com.cube.demo.rbxcb.rbxcb_3x3x3.*;
 import com.cube.demo.rbxcb.rbxcb_3x3x3.Masks.StageMasker;
+import com.cube.demo.rbxcb.rbxcb_3x3x3.Model.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;

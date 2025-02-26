@@ -1,8 +1,8 @@
 package com.cube.demo.rbxcb.rbxcb_3x3x3.Masks._4StageMask;
 
-import com.cube.demo.rbxcb.rbxcb_3x3x3.Cube;
-import com.cube.demo.rbxcb.rbxcb_3x3x3.EdgeOrientation;
-import com.cube.demo.rbxcb.rbxcb_3x3x3.EdgePos;
+import com.cube.demo.rbxcb.rbxcb_3x3x3.Model.Cube;
+import com.cube.demo.rbxcb.rbxcb_3x3x3.Model.EdgeOrientation;
+import com.cube.demo.rbxcb.rbxcb_3x3x3.Model.EdgePos;
 import com.cube.demo.rbxcb.rbxcb_3x3x3.Masks.StageMasker;
 
 import java.util.ArrayList;

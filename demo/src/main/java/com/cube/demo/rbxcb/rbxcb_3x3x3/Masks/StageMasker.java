@@ -1,6 +1,6 @@
 package com.cube.demo.rbxcb.rbxcb_3x3x3.Masks;
 
-import com.cube.demo.rbxcb.rbxcb_3x3x3.Cube;
+import com.cube.demo.rbxcb.rbxcb_3x3x3.Model.Cube;
 
 import java.util.ArrayList;
 

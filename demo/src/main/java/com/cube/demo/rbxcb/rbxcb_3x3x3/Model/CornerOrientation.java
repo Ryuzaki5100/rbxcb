@@ -1,9 +1,9 @@
-package com.cube.demo.rbxcb.rbxcb_3x3x3;
+package com.cube.demo.rbxcb.rbxcb_3x3x3.Model;
 
 import java.util.Arrays;
 
 public class CornerOrientation implements Cloneable {
-    private byte[] val;
+    private final byte[] val;
 
     public static byte[] SOLVED_VAL = {3, 3, 3, 3, -3, -3, -3, -3};
 

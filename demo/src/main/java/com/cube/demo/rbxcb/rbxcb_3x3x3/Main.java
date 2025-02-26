@@ -1,12 +1,8 @@
 package com.cube.demo.rbxcb.rbxcb_3x3x3;
 
+import com.cube.demo.rbxcb.rbxcb_3x3x3.Model.Cube;
 import com.cube.demo.rbxcb.rbxcb_3x3x3.Solvers.Solver;
 import com.cube.demo.rbxcb.rbxcb_3x3x3.Solvers._2StageSolver;
-import com.cube.demo.rbxcb.rbxcb_3x3x3.Solvers._3StageSolver;
-import com.cube.demo.rbxcb.rbxcb_3x3x3.Solvers._4StageSolver;
-
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
