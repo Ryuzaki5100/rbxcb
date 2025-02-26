@@ -1,17 +1,19 @@
 package com.cube.demo.rbxcb.rbxcb_3x3x3;
 
 import com.cube.demo.rbxcb.rbxcb_3x3x3.Model.Cube;
+import com.cube.demo.rbxcb.rbxcb_3x3x3.Solvers.OLL_Solver;
 import com.cube.demo.rbxcb.rbxcb_3x3x3.Solvers.Solver;
-import com.cube.demo.rbxcb.rbxcb_3x3x3.Solvers._2StageSolver;
 
 public class Main {
     public static void main(String[] args) {
         // ygywbrrgwrbwyooyyygrbgwwgbgoboorroowbybwyobggrywrgbowr
 //        Cube c = new Cube("gbbbbbgbbywroooyoowoowwwwwrwyrrrryrryroyyywyoggggggbgb");
-        Cube c = new Cube("ygywbrrgwrbwyooyyygrbgwwgbgoboorroowbybwyobggrywrgbowr");
-        Solver s = new _2StageSolver();
+//        Cube c = new Cube("ygywbrrgwrbwyooyyygrbgwwgbgoboorroowbybwyobggrywrgbowr");
+        String shuffle = "U2 B' L2 D2 R2 B' D2 L2 F' U' F U' F' R B' R' B2";
+        Cube c = new Cube();
+        c = Cube.execute(c, shuffle);
+        Solver s = new OLL_Solver();
         System.out.println(s.solve(c));
-
 //        Scanner sc = new Scanner(System.in);
 //        String colorInput;
 //
