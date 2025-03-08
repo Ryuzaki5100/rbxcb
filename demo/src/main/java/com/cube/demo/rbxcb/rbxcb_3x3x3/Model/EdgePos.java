@@ -3,7 +3,7 @@ package com.cube.demo.rbxcb.rbxcb_3x3x3.Model;
 import java.util.Arrays;
 
 public class EdgePos implements Cloneable {
-    private final byte[] val;
+    private byte[] val;
 
     public static byte[] SOLVED_VAL = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
 

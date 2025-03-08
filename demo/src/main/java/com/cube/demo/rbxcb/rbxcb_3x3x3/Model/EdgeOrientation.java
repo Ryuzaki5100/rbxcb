@@ -3,7 +3,7 @@ package com.cube.demo.rbxcb.rbxcb_3x3x3.Model;
 import java.util.Arrays;
 
 public class EdgeOrientation implements Cloneable {
-    private final byte[] val;
+    private byte[] val;
 
     public static byte[] SOLVED_VAL = {3, 3, 3, 3, 2, 2, -2, -2, -3, -3, -3, -3};
 

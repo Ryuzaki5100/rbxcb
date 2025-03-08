@@ -23,6 +23,7 @@ public class OLL_Mask implements StageMasker {
             edgeMask.add((int) edgePos.getVal()[i]);
 
         // Edge Orientation Masking :
+
         for (int i = 0; i < 12; i++)
             edgeMask.add((int) edgeOrientation.getVal()[i]);
 

@@ -13,7 +13,7 @@ public class OLL_Solver extends Solver {
     };
 
     private static final String[][] moveRestrictions = {
-            {"R", "RR", "RRR", "U", "UU", "UUU", "F", "FF", "FFF", "L", "LL", "LLL", "B", "BB", "BBB", "D", "DD", "DDD"}
+            {"R", "RR", "RRR", "U", "UU", "UUU", "F", "FF", "FFF", "B", "BB", "BBB"}
     };
 
     public ArrayList<String> solve(Cube c) {

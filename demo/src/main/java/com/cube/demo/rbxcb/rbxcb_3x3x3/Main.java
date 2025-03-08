@@ -3,17 +3,33 @@ package com.cube.demo.rbxcb.rbxcb_3x3x3;
 import com.cube.demo.rbxcb.rbxcb_3x3x3.Model.Cube;
 import com.cube.demo.rbxcb.rbxcb_3x3x3.Solvers.OLL_Solver;
 import com.cube.demo.rbxcb.rbxcb_3x3x3.Solvers.Solver;
+import com.cube.demo.rbxcb.rbxcb_3x3x3.Solvers._2StageSolver;
+
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         // ygywbrrgwrbwyooyyygrbgwwgbgoboorroowbybwyobggrywrgbowr
 //        Cube c = new Cube("gbbbbbgbbywroooyoowoowwwwwrwyrrrryrryroyyywyoggggggbgb");
 //        Cube c = new Cube("ygywbrrgwrbwyooyyygrbgwwgbgoboorroowbybwyobggrywrgbowr");
-        String shuffle = "U2 B' L2 D2 R2 B' D2 L2 F' U' F U' F' R B' R' B2";
-        Cube c = new Cube();
-        c = Cube.execute(c, shuffle);
-        Solver s = new OLL_Solver();
-        System.out.println(s.solve(c));
+        String shuffle;
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            shuffle = sc.nextLine();
+            Cube c = new Cube();
+            c = Cube.execute(c, shuffle);
+            Solver s = new _2StageSolver();
+            ArrayList<String> sol = s.solve(c);
+            System.out.println(sol + "  " + sol.size());
+        }
+//        shuffle = "U F2 U' F2 D2 B2 L2 U' B2 U' B2 U2 L R B D2 F2 L R'";
+//        Cube c = new Cube();
+//        c = Cube.execute(c, shuffle);
+//        System.out.println(c);
+//        c = new Cube();
+//        c = Cube.execute(c,"UU");
+//        System.out.println(c);
 //        Scanner sc = new Scanner(System.in);
 //        String colorInput;
 //
