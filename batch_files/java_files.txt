@@ -13,6 +13,7 @@ demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_4StageMask/Stage1.java
 demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_4StageMask/Stage2.java 
 demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_4StageMask/Stage3.java 
 demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_4StageMask/Stage4.java 
+demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/Atharva.java 
 demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/Corner.java 
 demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/CornerOrientation.java 
 demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/CornerPos.java 
