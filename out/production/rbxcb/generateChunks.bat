@@ -8,7 +8,7 @@ REM Define the input file containing Java file paths relative to the script's di
 set input_file=%script_dir%java_files.txt
 
 REM Define the Java class and method to call
-set java_class=com.cube.demo.SimpleJavaParser
+set java_class=SimpleJavaParser
 set java_method=parseJavaCodeToJson
 
 REM Define the Java executable
