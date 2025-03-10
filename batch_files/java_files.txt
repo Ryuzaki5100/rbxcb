@@ -15,6 +15,13 @@ demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_4StageMask/Stage1.java
 demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_4StageMask/Stage2.java 
 demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_4StageMask/Stage3.java 
 demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_4StageMask/Stage4.java 
+demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/Corner.java 
+demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/CornerOrientation.java 
+demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/CornerPos.java 
+demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/Cube.java 
+demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/Edge.java 
+demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/EdgeOrientation.java 
+demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/EdgePos.java 
 demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Solvers/OLL_Solver.java 
 demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Solvers/Solver.java 
 demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Solvers/_2StageSolver.java 
