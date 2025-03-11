@@ -1,0 +1,32 @@
+{ 
+  "demo/src/main/java/com/cube/demo/Amit.java ": 
+{"timestamp":"2025-03-11T05:24:43.660+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/Atharva.java ": 
+{"timestamp":"2025-03-11T05:24:44.241+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/CubeController.java ": 
+{"timestamp":"2025-03-11T05:24:44.531+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/DemoApplication.java ": 
+{"timestamp":"2025-03-11T05:24:44.887+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Main.java ": 
+{"timestamp":"2025-03-11T05:24:45.137+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/StageSolver.java ": 
+{"timestamp":"2025-03-11T05:24:45.498+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/StageMasker.java ": 
+{"timestamp":"2025-03-11T05:24:45.736+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/CFOP_Mask/OLL_Mask.java ": 
+{"timestamp":"2025-03-11T05:24:45.987+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_2StageMask/Stage1.java ": 
+{"timestamp":"2025-03-11T05:24:46.255+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_2StageMask/Stage2.java ": 
+{"timestamp":"2025-03-11T05:24:46.529+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_3StageMask/Stage1.java ": 
+{"timestamp":"2025-03-11T05:24:46.774+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_3StageMask/Stage2.java ": 
+{"timestamp":"2025-03-11T05:24:47.035+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_3StageMask/Stage3.java ": 
+{"timestamp":"2025-03-11T05:24:47.336+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_4StageMask/Stage1.java ": 
+{"timestamp":"2025-03-11T05:24:47.597+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_4StageMask/Stage2.java ": 
+{"timestamp":"2025-03-11T05:24:47.876+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_4StageMask/Stage3.java ": 
+{"timestamp":"2025-03-11T05:24:48.140+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Masks/_4StageMask/Stage4.java ": 
+{"timestamp":"2025-03-11T05:24:48.388+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/Corner.java ": 
+{"timestamp":"2025-03-11T05:24:48.676+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/CornerOrientation.java ": 
+{"timestamp":"2025-03-11T05:24:48.924+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/CornerPos.java ": 
+{"timestamp":"2025-03-11T05:24:49.170+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/Cube.java ": 
+{"timestamp":"2025-03-11T05:24:49.408+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/Edge.java ": 
+{"timestamp":"2025-03-11T05:24:49.680+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/EdgeOrientation.java ": 
+{"timestamp":"2025-03-11T05:24:49.964+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Model/EdgePos.java ": 
+{"timestamp":"2025-03-11T05:24:50.230+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Solvers/OLL_Solver.java ": 
+{"timestamp":"2025-03-11T05:24:50.483+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Solvers/Solver.java ": 
+{"timestamp":"2025-03-11T05:24:50.726+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Solvers/_2StageSolver.java ": 
+{"timestamp":"2025-03-11T05:24:50.979+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Solvers/_3StageSolver.java ": 
+{"timestamp":"2025-03-11T05:24:51.302+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/main/java/com/cube/demo/rbxcb/rbxcb_3x3x3/Solvers/_4StageSolver.java ": 
+{"timestamp":"2025-03-11T05:24:51.527+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}  , "demo/src/test/java/com/cube/demo/DemoApplicationTests.java ": 
+{"timestamp":"2025-03-11T05:24:51.771+00:00","status":500,"error":"Internal Server Error","path":"/parseJavaCodeToJSON"}} 
