@@ -5,8 +5,8 @@ FROM maven:3.9.4-eclipse-temurin-17 AS builder
 WORKDIR /app
 
 # Copy Maven project files
-COPY pom.xml .
-COPY src ./src
+COPY pom.xml demo/
+COPY src demo/src
 
 # Download dependencies and build the JAR
 RUN mvn clean package -DskipTests
