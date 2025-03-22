@@ -1,17 +1,16 @@
-# Use multi-stage build for efficiency
+# 🏗️ Stage 1: Build the application
 FROM maven:3.9.4-eclipse-temurin-17 AS builder
 
-# Set working directory inside the container
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy Maven project files
-COPY pom.xml demo/
-COPY src demo/src
+# Copy the entire project (assuming your Spring Boot app is in 'demo/')
+COPY demo/ /app/
 
-# Download dependencies and build the JAR
+# Run Maven to build the project
 RUN mvn clean package -DskipTests
 
-# Use a lightweight JDK runtime for the final image
+# 🏃‍♂️ Stage 2: Run the application with a lightweight JDK
 FROM eclipse-temurin:17-jre
 
 # Set working directory for runtime container
