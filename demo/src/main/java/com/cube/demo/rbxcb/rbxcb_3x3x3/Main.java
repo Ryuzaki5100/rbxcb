@@ -2,6 +2,7 @@ package com.cube.demo.rbxcb.rbxcb_3x3x3;
 
 import com.cube.demo.rbxcb.rbxcb_3x3x3.Model.Cube;
 import com.cube.demo.rbxcb.rbxcb_3x3x3.Solvers.OLL_Solver;
+import com.cube.demo.rbxcb.rbxcb_3x3x3.Solvers.PLL_Solver;
 import com.cube.demo.rbxcb.rbxcb_3x3x3.Solvers.Solver;
 import com.cube.demo.rbxcb.rbxcb_3x3x3.Solvers._2StageSolver;
 
@@ -19,7 +20,7 @@ public class Main {
             shuffle = sc.nextLine();
             Cube c = new Cube();
             c = Cube.execute(c, shuffle);
-            Solver s = new _2StageSolver();
+            Solver s = new PLL_Solver();
             ArrayList<String> sol = s.solve(c);
             System.out.println(sol + "  " + sol.size());
         }
@@ -56,3 +57,6 @@ public class Main {
 
     }
 }
+
+// B U2 B2 R2 B' U2 B2 R' D B2 U2 B D' R2 B
+// B2 L2 B2 U2 L2 R' F2 L' R' F' R F2 L2 U F U R

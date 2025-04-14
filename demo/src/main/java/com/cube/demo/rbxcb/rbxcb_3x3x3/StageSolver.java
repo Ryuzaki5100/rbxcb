@@ -4,8 +4,10 @@ import com.cube.demo.rbxcb.rbxcb_3x3x3.Masks.StageMasker;
 import com.cube.demo.rbxcb.rbxcb_3x3x3.Model.Cube;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Queue;
 import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class StageSolver {
@@ -116,10 +118,124 @@ public class StageSolver {
 
         return null; // In case no solution is found
     }
-}
 
-//        public String solveStage(String[] stagedMoveRestrictions, StageMasker sm) {
-//        Cube source = new Cube(this);
+    public static ArrayList<String> solve(Cube c, String[] moveRestrictions, StageMasker sm, int numSolutions) {
+        Cube source = c.clone();
+        Cube destination = new Cube();
+
+        if (sm.mask(source).equals(sm.mask(destination)))
+            return new ArrayList<>(Collections.singletonList(""));
+
+        class Temp {
+            final Cube c;
+            final String s;
+
+            public Temp(Cube c, String s) {
+                this.c = c.clone();
+                this.s = new String(s);
+            }
+        }
+
+        Queue<Temp> forward = new LinkedBlockingQueue<>();
+        Queue<Temp> backward = new LinkedBlockingQueue<>();
+
+        ConcurrentHashMap<ArrayList<Integer>, String> forwardSolution = new ConcurrentHashMap<>();
+        ConcurrentHashMap<ArrayList<Integer>, String> backwardSolution = new ConcurrentHashMap<>();
+
+        forwardSolution.put(sm.mask(source), "");
+        backwardSolution.put(sm.mask(destination), "");
+
+        forward.add(new Temp(source, ""));
+        backward.add(new Temp(destination, ""));
+
+        // Shared variable to store multiple solutions
+        ConcurrentLinkedQueue<String> solutions = new ConcurrentLinkedQueue<>();
+        AtomicInteger solutionCount = new AtomicInteger(0);
+        CountDownLatch latch = new CountDownLatch(1);
+
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+
+        // Forward search task
+        Runnable forwardSearch = () -> {
+            try {
+                while (!Thread.currentThread().isInterrupted() && solutionCount.get() < numSolutions) {
+                    Temp f = forward.poll();
+                    if (f == null) continue;
+
+                    for (String move : moveRestrictions) {
+                        Cube temp = Cube.execute(f.c, move);
+                        ArrayList<Integer> maskedState = sm.mask(temp);
+
+                        if (backwardSolution.containsKey(maskedState)) {
+                            String solution = f.s + move + Cube.reverseAlgorithm(backwardSolution.get(maskedState));
+                            solutions.add(solution);
+                            if (solutionCount.incrementAndGet() >= numSolutions) {
+                                latch.countDown();
+                                return;
+                            }
+                        }
+
+                        if (!forwardSolution.containsKey(maskedState)) {
+                            forwardSolution.put(maskedState, f.s + move);
+                            forward.add(new Temp(temp, f.s + move));
+                        }
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        };
+
+        // Backward search task
+        Runnable backwardSearch = () -> {
+            try {
+                while (!Thread.currentThread().isInterrupted() && solutionCount.get() < numSolutions) {
+                    Temp b = backward.poll();
+                    if (b == null) continue;
+
+                    for (String move : moveRestrictions) {
+                        Cube temp = Cube.execute(b.c, move);
+                        ArrayList<Integer> maskedState = sm.mask(temp);
+
+                        if (forwardSolution.containsKey(maskedState)) {
+                            String solution = forwardSolution.get(maskedState) + Cube.reverseAlgorithm(b.s + move);
+                            solutions.add(solution);
+                            if (solutionCount.incrementAndGet() >= numSolutions) {
+                                latch.countDown();
+                                return;
+                            }
+                        }
+
+                        if (!backwardSolution.containsKey(maskedState)) {
+                            backwardSolution.put(maskedState, b.s + move);
+                            backward.add(new Temp(temp, b.s + move));
+                        }
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        };
+
+        executor.submit(forwardSearch);
+        executor.submit(backwardSearch);
+
+        try {
+            latch.await();
+            executor.shutdownNow();
+            return new ArrayList<>(solutions);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            executor.shutdown();
+        }
+
+        return new ArrayList<>(solutions);
+    }
+
+
+//    public static String solve(Cube c, String[] stagedMoveRestrictions, StageMasker sm) {
+//        Cube source = c.clone();
 //        Cube destination = new Cube();
 //
 //        class Temp {
@@ -278,3 +394,5 @@ public class StageSolver {
 //        // Return the solution found
 //        return solution.get();
 //    }
+
+}
