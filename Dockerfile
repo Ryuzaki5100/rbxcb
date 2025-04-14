@@ -17,6 +17,6 @@ COPY --from=java-build /app/target/demo-0.0.1-SNAPSHOT.jar /app/app.jar
 
 EXPOSE 8080
 
-ENV JAVA_OPTS="-Xms2g -Xmx4g"
+ENV JAVA_OPTS="-Xms512m -Xmx1024m"
 
 CMD ["java", "-jar", "/app/app.jar"]
