@@ -1,4 +1,4 @@
-package com.cube.demo.rbxcb.rbxcb_3x3x3.Model;
+package com.cube.demo.rbxcb.rbxcb_4x4x4.Model;
 
 public class Corner implements Cloneable {
     private CornerPos cornerPos;
