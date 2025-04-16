@@ -35,8 +35,20 @@ public class Cube implements Cloneable {
     );
 
     private static final Map<Character, CenterPos> nextCenterPos = Map.ofEntries(
-//            Map.entry('')
+            Map.entry('R', new CenterPos(new int[]{0, 1, 2, 3, 4, 5, 14, 6, 8, 9, 10, 11, 12, 13, 15, 7, 16, 17, 18, 19, 20, 21, 22, 23})),
+            Map.entry('U', new CenterPos(new int[]{1, 2, 3, 0, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23})),
+            Map.entry('F', new CenterPos(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 16, 8, 10, 11, 12, 13, 14, 15, 17, 9, 18, 19, 20, 21, 22, 23})),
+            Map.entry('B', new CenterPos(new int[]{0, 1, 2, 3, 12, 4, 6, 7, 8, 9, 10, 11, 13, 5, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23})),
+            Map.entry('L', new CenterPos(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 18, 10, 12, 13, 14, 15, 16, 17, 19, 11, 20, 21, 22, 23})),
+            Map.entry('D', new CenterPos(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 23, 20, 21, 22})),
+            Map.entry('r', new CenterPos(new int[]{0, 13, 5, 3, 4, 21, 6, 7, 1, 9, 10, 11, 12, 22, 14, 15, 2, 17, 18, 19, 20, 16, 8, 23})),
+            Map.entry('u', new CenterPos(new int[]{0, 1, 2, 3, 6, 7, 8, 9, 10, 11, 4, 5, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23})),
+            Map.entry('f', new CenterPos(new int[]{0, 1, 15, 7, 4, 5, 6, 22, 8, 9, 2, 11, 12, 13, 14, 23, 16, 17, 3, 19, 20, 21, 18, 10})),
+            Map.entry('b', new CenterPos(new int[]{19, 11, 2, 3, 4, 5, 0, 7, 8, 9, 10, 20, 12, 13, 1, 15, 16, 17, 18, 21, 14, 6, 22, 23})),
+            Map.entry('l', new CenterPos(new int[]{9, 1, 2, 17, 3, 5, 6, 7, 8, 23, 10, 11, 0, 13, 14, 15, 16, 20, 18, 19, 4, 21, 22, 12})),
+            Map.entry('d', new CenterPos(new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 18, 19, 12, 13, 14, 15, 16, 17, 20, 21, 22, 23}))
     );
 
 
 }
+
