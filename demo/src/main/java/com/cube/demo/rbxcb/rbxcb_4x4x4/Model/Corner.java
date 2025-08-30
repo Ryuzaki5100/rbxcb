@@ -6,7 +6,15 @@ public class Corner implements Cloneable {
 
     @Override
     public Corner clone() {
-        return new Corner(this.cornerPos.clone(), this.getCornerOrientation().clone());
+        Corner corner;
+        try{
+            corner = (Corner) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
+        corner.setCornerPos(this.getCornerPos().clone());
+        corner.setCornerOrientation(this.getCornerOrientation().clone());
+        return corner;
     }
 
     public Corner() {

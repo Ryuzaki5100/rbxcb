@@ -3,26 +3,33 @@ package com.cube.demo.rbxcb.rbxcb_4x4x4.Model;
 import java.util.Arrays;
 
 public class CenterPos implements Cloneable {
-    private int[] val;
+    private byte[] val;
 
-    public static int[] SOLVED_VAL = {
+    public static byte[] SOLVED_VAL = {
             0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 5, 5
     };
 
     @Override
     public CenterPos clone() {
-        return new CenterPos(this.val.clone());
+        CenterPos centerPos;
+        try{
+            centerPos = (CenterPos) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
+        centerPos.setVal(this.val.clone());
+        return centerPos;
     }
 
     public CenterPos() {
-        this.val = EdgePos.SOLVED_VAL.clone();
+        this.val = CenterPos.SOLVED_VAL.clone();
     }
 
     public CenterPos(CenterPos e) {
         this.val = e.val.clone();
     }
 
-    public CenterPos(int[] val) {
+    public CenterPos(byte[] val) {
         this.val = val;
     }
 
@@ -33,12 +40,15 @@ public class CenterPos implements Cloneable {
                 "\n}";
     }
 
-    public int[] getVal() {
+    public byte[] getVal() {
         return val;
     }
 
-    public void setVal(int i, int val) {
+    public void setVal(int i, byte val) {
         this.val[i] = val;
     }
 
+    public void setVal(byte[] val) {
+        this.val = val;
+    }
 }

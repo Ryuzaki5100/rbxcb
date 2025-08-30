@@ -6,7 +6,15 @@ public class Center implements Cloneable {
 
     @Override
     public Center clone() {
-        return new Center(this.getCenterPos().clone(), this.getCenterOrientation().clone());
+        Center center;
+        try{
+            center = (Center) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
+        center.setCenterPos(this.getCenterPos().clone());
+        center.setCenterOrientation(this.getCenterOrientation().clone());
+        return center;
     }
 
     public Center() {

@@ -3,15 +3,22 @@ package com.cube.demo.rbxcb.rbxcb_4x4x4.Model;
 import java.util.Arrays;
 
 public class CenterOrientation implements Cloneable {
-    private int[] val;
+    private byte[] val;
 
-    public static int[] SOLVED_VAL = {
+    public static byte[] SOLVED_VAL = {
             3, 3, 3, 3, 2, 2, 1, 1, -2, -2, -1, -1, 2, 2, 1, 1, -2, -2, -1, -1, -3, -3, -3, -3
     };
 
     @Override
     public CenterOrientation clone() {
-        return new CenterOrientation(this.val.clone());
+        CenterOrientation centerOrientation;
+        try{
+            centerOrientation = (CenterOrientation) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
+        centerOrientation.setVal(this.val.clone());
+        return centerOrientation;
     }
 
     public CenterOrientation() {
@@ -22,7 +29,7 @@ public class CenterOrientation implements Cloneable {
         this.val = c.val.clone();
     }
 
-    public CenterOrientation(int[] val) {
+    public CenterOrientation(byte[] val) {
         this.val = val;
     }
 
@@ -33,11 +40,15 @@ public class CenterOrientation implements Cloneable {
                 "\n}";
     }
 
-    public int[] getVal() {
+    public byte[] getVal() {
         return val;
     }
 
     public void setVal(int i, byte val) {
         this.val[i] = val;
+    }
+
+    public void setVal(byte[] val) {
+        this.val = val;
     }
 }

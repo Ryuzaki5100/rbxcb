@@ -3,24 +3,31 @@ package com.cube.demo.rbxcb.rbxcb_4x4x4.Model;
 import java.util.Arrays;
 
 public class CornerPos implements Cloneable {
-    private int[] val;
+    private byte[] val;
 
-    public static int[] SOLVED_VAL = {0, 1, 2, 3, 4, 5, 6, 7};
+    public static byte[] SOLVED_VAL = { 0, 1, 2, 3, 4, 5, 6, 7 };
 
     @Override
     public CornerPos clone() {
-        return new CornerPos(this.val.clone());
+        CornerPos cornerPos;
+        try {
+            cornerPos = (CornerPos) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
+        cornerPos.setVal(this.val.clone());
+        return cornerPos;
     }
 
     public CornerPos() {
         this.val = CornerPos.SOLVED_VAL.clone();
     }
 
-    public CornerPos(CornerPos c){
+    public CornerPos(CornerPos c) {
         this.val = c.val.clone();
     }
 
-    public CornerPos(int[] val) {
+    public CornerPos(byte[] val) {
         this.val = val;
     }
 
@@ -31,11 +38,15 @@ public class CornerPos implements Cloneable {
                 "\n}";
     }
 
-    public int[] getVal() {
+    public byte[] getVal() {
         return val;
     }
 
-    public void setVal(int i, int val) {
+    public void setVal(int i, byte val) {
         this.val[i] = val;
+    }
+
+    public void setVal(byte[] val) {
+        this.val = val;
     }
 }

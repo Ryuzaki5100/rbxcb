@@ -16,7 +16,7 @@ public class Main {
     // Cube c = new Cube("ygywbrrgwrbwyooyyygrbgwwgbgoboorroowbybwyobggrywrgbowr");
     // String shuffle;
     // Scanner sc = new Scanner(System.in);
-    // while (true) {
+    // while (true) { 
     // shuffle = sc.nextLine();
     // Cube c = new Cube();
     // c = Cube.execute(c, shuffle);
@@ -27,7 +27,7 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
     String colorInput = scanner.nextLine();
     Cube c = new Cube(colorInput);
-    Solver s = new _4StageSolver();
+    Solver s = new _2StageSolver();
     ArrayList<String> sol = s.solve(c);
     System.out.println(sol);
     // shuffle = "U F2 U' F2 D2 B2 L2 U' B2 U' B2 U2 L R B D2 F2 L R'";

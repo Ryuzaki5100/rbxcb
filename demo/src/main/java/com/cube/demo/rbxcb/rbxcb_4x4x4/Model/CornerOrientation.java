@@ -3,13 +3,20 @@ package com.cube.demo.rbxcb.rbxcb_4x4x4.Model;
 import java.util.Arrays;
 
 public class CornerOrientation implements Cloneable {
-    private int[] val;
+    private byte[] val;
 
-    public static int[] SOLVED_VAL = {3, 3, 3, 3, -3, -3, -3, -3};
+    public static byte[] SOLVED_VAL = {3, 3, 3, 3, -3, -3, -3, -3};
 
     @Override
     public CornerOrientation clone() {
-        return new CornerOrientation(this.val.clone());
+        CornerOrientation cornerOrientation;
+        try{
+            cornerOrientation = (CornerOrientation) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
+        cornerOrientation.setVal(this.val.clone());
+        return cornerOrientation;
     }
 
     public CornerOrientation() {
@@ -20,7 +27,7 @@ public class CornerOrientation implements Cloneable {
         this.val = c.val.clone();
     }
 
-    public CornerOrientation(int[] val) {
+    public CornerOrientation(byte[] val) {
         this.val = val;
     }
 
@@ -31,11 +38,15 @@ public class CornerOrientation implements Cloneable {
                 "\n}";
     }
 
-    public int[] getVal() {
+    public byte[] getVal() {
         return val;
     }
 
     public void setVal(int i, byte val) {
         this.val[i] = val;
+    }
+
+    public void setVal(byte[] val) {
+        this.val = val;
     }
 }
