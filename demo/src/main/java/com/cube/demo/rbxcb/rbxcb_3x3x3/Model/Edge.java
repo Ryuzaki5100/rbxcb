@@ -5,8 +5,17 @@ public class Edge implements Cloneable {
     private EdgeOrientation edgeOrientation;
 
     @Override
-    public Edge clone() {
-        return new Edge(this.getEdgePos().clone(), this.getEdgeOrientation().clone());
+    public Edge clone()  {
+        Edge edge = null;
+        try {
+            edge = (Edge) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
+        edge.setEdgePos(this.edgePos.clone());
+        edge.setEdgeOrientation(this.edgeOrientation.clone());
+        return edge;
+//        return new Edge(this.getEdgePos().clone(), this.getEdgeOrientation().clone());
     }
 
     public Edge() {

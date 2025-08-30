@@ -9,7 +9,14 @@ public class CornerOrientation implements Cloneable {
 
     @Override
     public CornerOrientation clone() {
-        return new CornerOrientation(this.val.clone());
+        CornerOrientation cornerOrientation;
+        try {
+            cornerOrientation = (CornerOrientation) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
+        cornerOrientation.setVal(this.val.clone());
+        return cornerOrientation;
     }
 
     public CornerOrientation() {
@@ -37,5 +44,9 @@ public class CornerOrientation implements Cloneable {
 
     public void setVal(int i, byte val) {
         this.val[i] = val;
+    }
+
+    private void setVal(byte[] val) {
+        this.val = val;
     }
 }

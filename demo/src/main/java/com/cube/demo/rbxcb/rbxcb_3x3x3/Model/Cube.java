@@ -26,18 +26,18 @@ public class Cube implements Cloneable {
 
     private static final Map<Character, List<Map<Byte, Byte>>> nextEdgeOrientation = Map.of(
             'R', List.of(
-                    Map.of((byte) 3, (byte) 3, (byte) 2, (byte) 2),
-                    Map.of((byte) 3, (byte) 2, (byte) 1, (byte) 1),
-                    Map.of((byte) 3, (byte) 3, (byte) -2, (byte) -2),
-                    Map.of((byte) 3, (byte) 3, (byte) -1, (byte) -1),
-                    Map.of((byte) 2, (byte) 2, (byte) -1, (byte) -1),
-                    Map.of((byte) 2, (byte) -3, (byte) 1, (byte) 1),
-                    Map.of((byte) -2, (byte) 3, (byte) 1, (byte) 1),
-                    Map.of((byte) -2, (byte) -2, (byte) -1, (byte) -1),
-                    Map.of((byte) 2, (byte) 2, (byte) -3, (byte) -3),
-                    Map.of((byte) 1, (byte) 1, (byte) -3, (byte) -2),
-                    Map.of((byte) -3, (byte) -3, (byte) -2, (byte) -2),
-                    Map.of((byte) -3, (byte) -3, (byte) -1, (byte) -1)
+                    Map.of((byte) 3, (byte) 3, (byte) 2, (byte) 2), // 0
+                    Map.of((byte) 3, (byte) 2, (byte) 1, (byte) 1), // 1
+                    Map.of((byte) 3, (byte) 3, (byte) -2, (byte) -2), // 2
+                    Map.of((byte) 3, (byte) 3, (byte) -1, (byte) -1), // 3
+                    Map.of((byte) 2, (byte) 2, (byte) -1, (byte) -1), // 4
+                    Map.of((byte) 2, (byte) -3, (byte) 1, (byte) 1), // 5
+                    Map.of((byte) -2, (byte) 3, (byte) 1, (byte) 1), // 6
+                    Map.of((byte) -2, (byte) -2, (byte) -1, (byte) -1), // 7
+                    Map.of((byte) 2, (byte) 2, (byte) -3, (byte) -3), // 8
+                    Map.of((byte) 1, (byte) 1, (byte) -3, (byte) -2), // 9
+                    Map.of((byte) -3, (byte) -3, (byte) -2, (byte) -2), // 10
+                    Map.of((byte) -3, (byte) -3, (byte) -1, (byte) -1) // 11
             ),
             'U', List.of(
                     Map.of((byte) 3, (byte) 3, (byte) 2, (byte) 1),
@@ -354,10 +354,18 @@ public class Cube implements Cloneable {
 
     @Override
     public Cube clone() {
-        return new Cube(this.getEdge().clone(), this.getCorner().clone());
+        Cube cube = null;
+        try {
+            cube = (Cube) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
+        cube.setEdge(this.edge.clone());
+        cube.setCorner(this.corner.clone());
+        return cube;
     }
 
-    public static Cube execute(Cube c, String s) {
+    public static Cube execute(Cube c, String s){
         Cube temp = c.clone();
 
         String[] moves = s.split(" ");

@@ -9,14 +9,21 @@ public class CornerPos implements Cloneable {
 
     @Override
     public CornerPos clone() {
-        return new CornerPos(this.val.clone());
+        CornerPos cornerPos;
+        try {
+            cornerPos = (CornerPos) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
+        cornerPos.setVal(this.val.clone());
+        return cornerPos;
     }
 
     public CornerPos() {
         this.val = CornerPos.SOLVED_VAL.clone();
     }
 
-    public CornerPos(CornerPos c){
+    public CornerPos(CornerPos c) {
         this.val = c.val.clone();
     }
 
@@ -37,5 +44,9 @@ public class CornerPos implements Cloneable {
 
     public void setVal(int i, byte val) {
         this.val[i] = val;
+    }
+
+    private void setVal(byte[] val) {
+        this.val = val;
     }
 }

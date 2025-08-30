@@ -8,8 +8,15 @@ public class EdgeOrientation implements Cloneable {
     public static byte[] SOLVED_VAL = {3, 3, 3, 3, 2, 2, -2, -2, -3, -3, -3, -3};
 
     @Override
-    public EdgeOrientation clone() {
-        return new EdgeOrientation(this.val.clone());
+    public EdgeOrientation clone()  {
+        EdgeOrientation edgeOrientation;
+        try {
+            edgeOrientation = (EdgeOrientation) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
+        edgeOrientation.setVal(this.val.clone());
+        return edgeOrientation;
     }
 
     public EdgeOrientation() {
@@ -37,5 +44,9 @@ public class EdgeOrientation implements Cloneable {
 
     public void setVal(int i, byte val) {
         this.val[i] = val;
+    }
+
+    private void setVal(byte[] val) {
+        this.val = val;
     }
 }
