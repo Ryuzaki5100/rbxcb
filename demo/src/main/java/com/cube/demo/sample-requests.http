@@ -1,0 +1,2 @@
+### Solve Cube Endpoint
+GET http://localhost:8080/solve/rbxcb3x3/cube?colorInput=ybgrbrrbbrgbooygorwyyrwyggboboorgwbryobyygyrwwwowgwowg&stages=2 HTTP/1.1
